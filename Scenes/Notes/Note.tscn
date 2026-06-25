@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c3kuwcph7jykm"]
+
+[ext_resource type="Script" uid="uid://5tit8bj0mcdk" path="res://Scripts/Notes/Note.gd" id="2_picia"]
+[ext_resource type="Texture2D" uid="uid://e8x4hjaf4tdm" path="res://Sprites/Particle/NoteSprites/vinyl.png" id="3_i3jxm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v22gl"]
+load_path = "res://.godot/imported/circle_03.png-b8939b7c22df132d156eb598c8367ad9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iathj"]
+load_path = "res://.godot/imported/star_08.png-330aff8ca327f0de1e3fe19920df4031.ctex"
+
+[node name="Root" type="Node2D" unique_id=831230135]
+z_index = 10
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_picia")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1947779196]
+texture = SubResource("CompressedTexture2D_v22gl")
+
+[node name="Border" type="Sprite2D" parent="BG" unique_id=821872979]
+scale = Vector2(0.67114097, 0.67114097)
+texture = ExtResource("3_i3jxm")
+
+[node name="Main" type="Sprite2D" parent="BG/Border" unique_id=2131082179]
+visible = false
+texture = SubResource("CompressedTexture2D_iathj")

@@ -1,0 +1,182 @@
+[
+  {
+	"target": [0],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 1
+  },
+  {
+	"target": [1],
+	"type": 1,
+	"duration": 1,
+	"hitTime": 2
+  },
+  {
+	"target": [2],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 4.0
+  },
+  {
+	"target": [3],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 4.5
+  },
+  {
+	"target": [4],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 5.5
+  },
+  {
+	"target": [5],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 6.0
+  },
+  {
+	"target": [0],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 6.5
+  },
+  {
+	"target": [1],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 7
+  },
+  {
+	"target": [2],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 8
+  },
+  {
+	"target": [3],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 8.5
+  },
+  {
+	"target": [4],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 9.0
+  },
+  {
+	"target": [5],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 9.5
+  },
+  {
+	"target": [0],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 10.0
+  },
+  {
+	"target": [1],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 11.0
+  },
+  {
+	"target": [3],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 11.5
+  },
+  {
+	"target": [4],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 12.0
+  },
+  {
+	"target": [5],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 12.5
+  },
+  {
+	"target": [0],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 13
+  },
+  {
+	"target": [1],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 13.5
+  },
+  {
+	"target": [3],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 14.0
+  },
+  {
+	"target": [4],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 14.5
+  },
+  {
+	"target": [0],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 15.0
+  },
+  {
+	"target": [1],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 16.0
+  },
+  {
+	"target": [2],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 17.0
+  },
+  {
+	"target": [4],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 17.5
+  },
+  {
+	"target": [5],
+	"type": 1,
+	"duration": 0.75,
+	"hitTime":18
+  },
+  {
+	"target": [0],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 19.0
+  },
+  {
+	"target": [1],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 19.5
+  },
+  {
+	"target": [2],
+	"type": 0,
+	"duration": 0,
+	"hitTime": 20.0
+  },
+  {
+	"target": [1, 2],
+	"type": 1,
+	"duration": 1.84,
+	"hitTime": 28.61
+  }
+]

@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://p45l1fn238sr"]
+
+[ext_resource type="Texture2D" uid="uid://brbq5armxthlj" path="res://Sprites/MainBackground/ffgenbg.png" id="1_vy5pj"]
+[ext_resource type="Shader" uid="uid://c2hvddq6tkryh" path="res://Shaders/Sprite2DCustomShader.gdshader" id="2_grg3l"]
+[ext_resource type="Texture2D" uid="uid://c2try1gxw78ob" path="res://Sprites/Particle/circle_03.png" id="3_frkhe"]
+[ext_resource type="PackedScene" uid="uid://c3kuwcph7jykm" path="res://Scenes/Notes/Note.tscn" id="4_jw32o"]
+[ext_resource type="PackedScene" uid="uid://bj3acd685avg7" path="res://Scenes/Notes/LongNote.tscn" id="5_50glp"]
+[ext_resource type="PackedScene" uid="uid://dqmqaotcfgwtp" path="res://Scenes/NoteParticle.tscn" id="5_jw32o"]
+[ext_resource type="PackedScene" uid="uid://dbepl0blqpa2m" path="res://Scenes/Button.tscn" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://bq0j5gr1s2p2l" path="res://Scripts/Autoloads/ButtonReferences.gd" id="5_v1gob"]
+[ext_resource type="Script" uid="uid://dnexp38i6yeyr" path="res://Scripts/GameConfig.gd" id="6_v1gob"]
+[ext_resource type="Script" uid="uid://cyb07jxf8lp2j" path="res://Scripts/TimerLabel.gd" id="8_50glp"]
+[ext_resource type="PackedScene" uid="uid://k34l0iet6klc" path="res://Scenes/Notes/ScratchNote.tscn" id="8_bmxlf"]
+[ext_resource type="AudioStream" uid="uid://cskcu44jkwf8a" path="res://Audio/Break_The_Loop.mp3" id="10_bmxlf"]
+[ext_resource type="FontFile" uid="uid://c6upwfn1ixtvb" path="res://Settings/Kenney Future Narrow.ttf" id="11_frkhe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1p5hy"]
+shader = ExtResource("2_grg3l")
+shader_parameter/tint_color = Color(0.8627451, 0.75686276, 0.77254903, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pbw6q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_grg3l"]
+font = ExtResource("11_frkhe")
+
+[node name="Node2D" type="Node2D" unique_id=340256876]
+
+[node name="BG" type="Node" parent="." unique_id=1850198314]
+
+[node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=1765301124]
+z_index = -10
+texture = ExtResource("1_vy5pj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG" unique_id=191295970]
+z_index = -10
+material = SubResource("ShaderMaterial_1p5hy")
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("3_frkhe")
+
+[node name="Start" type="Sprite2D" parent="." unique_id=1727513851]
+texture = SubResource("CompressedTexture2D_pbw6q")
+
+[node name="End" type="Sprite2D" parent="." unique_id=1100885465]
+visible = false
+position = Vector2(194, 0)
+texture = SubResource("CompressedTexture2D_pbw6q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1621197854]
+
+[node name="NoteButtons" type="Node" parent="." unique_id=1313078357 node_paths=PackedStringArray("Center", "ButtonUp", "ButtonRight", "ButtonDown", "ButtonS", "ButtonA", "ButtonW")]
+physics_interpolation_mode = 2
+auto_translate_mode = 2
+script = ExtResource("5_v1gob")
+Center = NodePath("../Start")
+ButtonUp = NodePath("ButtonUp")
+ButtonRight = NodePath("ButtonRight")
+ButtonDown = NodePath("ButtonDown")
+ButtonS = NodePath("ButtonS")
+ButtonA = NodePath("ButtonA")
+ButtonW = NodePath("ButtonW")
+
+[node name="ButtonScratch" parent="NoteButtons" unique_id=1903230270 instance=ExtResource("5_pbw6q")]
+position = Vector2(500, -200)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonScratch"
+
+[node name="ButtonUp" parent="NoteButtons" unique_id=1501818736 instance=ExtResource("5_pbw6q")]
+position = Vector2(500, -200)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonUp"
+
+[node name="ButtonRight" parent="NoteButtons" unique_id=999831891 instance=ExtResource("5_pbw6q")]
+position = Vector2(550, 0)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonRight"
+
+[node name="AnimatedSprite2D" parent="NoteButtons/ButtonRight" index="1" unique_id=902892564]
+frame = 1
+
+[node name="ButtonDown" parent="NoteButtons" unique_id=1609026219 instance=ExtResource("5_pbw6q")]
+position = Vector2(500, 200)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonDown"
+
+[node name="AnimatedSprite2D" parent="NoteButtons/ButtonDown" index="1" unique_id=902892564]
+frame = 2
+
+[node name="ButtonS" parent="NoteButtons" unique_id=1387099744 instance=ExtResource("5_pbw6q")]
+position = Vector2(-500, 200)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonS"
+
+[node name="AnimatedSprite2D" parent="NoteButtons/ButtonS" index="1" unique_id=902892564]
+frame = 3
+
+[node name="ButtonA" parent="NoteButtons" unique_id=1440774852 instance=ExtResource("5_pbw6q")]
+position = Vector2(-550, 0)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonA"
+
+[node name="AnimatedSprite2D" parent="NoteButtons/ButtonA" index="1" unique_id=902892564]
+frame = 4
+
+[node name="ButtonW" parent="NoteButtons" unique_id=734589538 instance=ExtResource("5_pbw6q")]
+position = Vector2(-500, -200)
+scale = Vector2(0.15, 0.15)
+buttonValue = "ButtonW"
+
+[node name="AnimatedSprite2D" parent="NoteButtons/ButtonW" index="1" unique_id=902892564]
+position = Vector2(0, 13.333252)
+frame = 5
+
+[node name="Config" type="Node" parent="." unique_id=269894103]
+script = ExtResource("6_v1gob")
+song = "res://SongData/song2.json"
+noteScene = ExtResource("4_jw32o")
+longNoteScene = ExtResource("5_50glp")
+scratchNoteScene = ExtResource("8_bmxlf")
+particleScene = ExtResource("5_jw32o")
+
+[node name="Label" type="Label" parent="." unique_id=1914873996 node_paths=PackedStringArray("timer")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_bottom = -225.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+label_settings = SubResource("LabelSettings_grg3l")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_50glp")
+timer = NodePath(".")
+
+[node name="Song" type="AudioStreamPlayer2D" parent="." unique_id=1732992944]
+stream = ExtResource("10_bmxlf")
+autoplay = true
+
+[editable path="NoteButtons/ButtonScratch"]
+[editable path="NoteButtons/ButtonUp"]
+[editable path="NoteButtons/ButtonRight"]
+[editable path="NoteButtons/ButtonDown"]
+[editable path="NoteButtons/ButtonS"]
+[editable path="NoteButtons/ButtonA"]
+[editable path="NoteButtons/ButtonW"]

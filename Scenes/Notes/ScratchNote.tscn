@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://k34l0iet6klc"]
+
+[ext_resource type="Script" uid="uid://67ppj46026wl" path="res://Scripts/Notes/ScratchNote.gd" id="1_0e6t6"]
+[ext_resource type="Texture2D" uid="uid://cncrmwgyajttf" path="res://Sprites/Particle/vecteezy_minimalist-white-circle-border_60512381.png" id="2_0e6t6"]
+
+[node name="Root" type="Node2D" unique_id=831230135]
+script = ExtResource("1_0e6t6")
+
+[node name="Border" type="Sprite2D" parent="." unique_id=821872979]
+texture = ExtResource("2_0e6t6")

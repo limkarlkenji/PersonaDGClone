@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dbepl0blqpa2m"]
+
+[ext_resource type="Script" uid="uid://c5h7mcgrbek6s" path="res://Scripts/NoteButton.gd" id="1_a506e"]
+[ext_resource type="SpriteFrames" uid="uid://ddvb31hyragp6" path="res://Sprites/Buttons/ButtonSprites.tres" id="1_p3102"]
+[ext_resource type="Shader" uid="uid://c2hvddq6tkryh" path="res://Shaders/Sprite2DCustomShader.gdshader" id="2_5eqqv"]
+[ext_resource type="Texture2D" uid="uid://bhkmqxp07487i" path="res://Sprites/Particle/generic_button_circle.png" id="2_kbgbk"]
+[ext_resource type="LabelSettings" uid="uid://hfu1pmhp7emh" path="res://Settings/LabelSettings.tres" id="4_kbgbk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gf234"]
+shader = ExtResource("2_5eqqv")
+shader_parameter/tint_color = Color(0.7607843, 0.6509804, 0.3647059, 1)
+
+[sub_resource type="Animation" id="Animation_5eqqv"]
+resource_name = "Miss"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-655, -300), Vector2(-655, -1500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_5xx2a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-400, -300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kbgbk"]
+resource_name = "Rotate"
+length = 2.0
+loop_mode = 1
+step = 5.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5eqqv"]
+_data = {
+&"Miss": SubResource("Animation_5eqqv"),
+&"RESET": SubResource("Animation_5xx2a"),
+&"Rotate": SubResource("Animation_kbgbk")
+}
+
+[node name="Button" type="Node2D" unique_id=1903230270 node_paths=PackedStringArray("longNoteEffect", "missNoteEffect")]
+script = ExtResource("1_a506e")
+longNoteEffect = NodePath("HoldNoteAnimation")
+missNoteEffect = NodePath("MissNoteAnimation")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1228944643]
+z_index = -5
+material = SubResource("ShaderMaterial_gf234")
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("2_kbgbk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=902892564]
+z_index = -5
+scale = Vector2(10, 10)
+sprite_frames = ExtResource("1_p3102")
+
+[node name="HoldNoteAnimation" type="AnimationPlayer" parent="." unique_id=286745911]
+libraries/ = SubResource("AnimationLibrary_5eqqv")
+speed_scale = 3.0
+
+[node name="MissNoteAnimation" type="AnimationPlayer" parent="." unique_id=393246566]
+libraries/ = SubResource("AnimationLibrary_5eqqv")
+speed_scale = 3.0
+
+[node name="Label" type="Label" parent="." unique_id=1348154812]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 910.0
+offset_bottom = 207.0
+grow_horizontal = 2
+pivot_offset = Vector2(655, 300)
+size_flags_stretch_ratio = 0.0
+text = "MISS!"
+label_settings = ExtResource("4_kbgbk")
+horizontal_alignment = 1
+vertical_alignment = 1

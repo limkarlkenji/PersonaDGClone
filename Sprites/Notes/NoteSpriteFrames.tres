@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bafmxxq2novw1"]
+
+[ext_resource type="Texture2D" uid="uid://cwhat704y4klg" path="res://Sprites/Particle/ring_a_noise.png" id="1_6cxs4"]
+[ext_resource type="Texture2D" uid="uid://ceb3tm7eyev8p" path="res://Sprites/Particle/ring_a.png" id="2_38df4"]
+[ext_resource type="Texture2D" uid="uid://dlcp7f78ewyjp" path="res://Sprites/Particle/ring_b.png" id="3_f22bt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6cxs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_38df4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f22bt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://hfu1pmhp7emh"]
+
+[ext_resource type="FontFile" uid="uid://c6upwfn1ixtvb" path="res://Settings/Kenney Future Narrow.ttf" id="1_7888j"]
+
+[resource]
+font = ExtResource("1_7888j")
+font_size = 450
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)

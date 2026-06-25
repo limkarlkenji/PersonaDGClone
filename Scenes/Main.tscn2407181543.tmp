@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://p45l1fn238sr"]
+
+[ext_resource type="Script" uid="uid://cs8thgm6kjyfm" path="res://Scripts/NoteSpawnTest.gd" id="2_idj7w"]
+[ext_resource type="Script" uid="uid://ohkth5b4ga" path="res://Scripts/Autoloads/NotePool.gd" id="3_v1gob"]
+[ext_resource type="PackedScene" uid="uid://c3kuwcph7jykm" path="res://Scenes/Note.tscn" id="4_jw32o"]
+[ext_resource type="PackedScene" uid="uid://dbepl0blqpa2m" path="res://Scenes/Button.tscn" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://bq0j5gr1s2p2l" path="res://Scripts/Autoloads/ButtonReferences.gd" id="5_v1gob"]
+[ext_resource type="Script" uid="uid://bxxiucogfoouf" path="res://Scripts/Autoloads/SongReader.gd" id="6_v1gob"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pbw6q"]
+load_path = "res://.godot/imported/NOTESKIN_NAME_07.png-6cc2a0c4bb25f8f72359ef1b000c5810.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=340256876]
+
+[node name="Start" type="Sprite2D" parent="." unique_id=1727513851]
+texture = SubResource("CompressedTexture2D_pbw6q")
+
+[node name="End" type="Sprite2D" parent="." unique_id=1100885465]
+visible = false
+position = Vector2(194, 0)
+texture = SubResource("CompressedTexture2D_pbw6q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1621197854]
+
+[node name="Node" type="Node" parent="." unique_id=423190274]
+script = ExtResource("2_idj7w")
+
+[node name="Node" type="Node" parent="Node" unique_id=1992924016]
+physics_interpolation_mode = 2
+auto_translate_mode = 2
+
+[node name="NotePool" type="Node" parent="." unique_id=769982898]
+script = ExtResource("3_v1gob")
+noteScene = ExtResource("4_jw32o")
+initialSize = 10
+
+[node name="NoteButtons" type="Node" parent="." unique_id=1313078357 node_paths=PackedStringArray("Center", "ButtonA", "ButtonJ")]
+physics_interpolation_mode = 2
+auto_translate_mode = 2
+script = ExtResource("5_v1gob")
+Center = NodePath("../Start")
+ButtonA = NodePath("ButtonJ")
+ButtonJ = NodePath("ButtonJ")
+
+[node name="ButtonJ" parent="NoteButtons" unique_id=1903230270 instance=ExtResource("5_pbw6q")]
+position = Vector2(500, -200)
+
+[node name="SongReader" type="Node" parent="." unique_id=269894103]
+script = ExtResource("6_v1gob")
+song = "res://SongData/testSong.json"

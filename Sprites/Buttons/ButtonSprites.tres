@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ddvb31hyragp6"]
+
+[ext_resource type="Texture2D" uid="uid://dbkge8nqb78ot" path="res://Sprites/Buttons/keyboard_arrow_up_outline.png" id="1_5gc3s"]
+[ext_resource type="Texture2D" uid="uid://bgp0maoxhubhc" path="res://Sprites/Buttons/keyboard_arrow_right_outline.png" id="2_uiblx"]
+[ext_resource type="Texture2D" uid="uid://7a1754clt675" path="res://Sprites/Buttons/keyboard_arrow_down_outline.png" id="3_rx3p1"]
+[ext_resource type="Texture2D" uid="uid://busf53gcb75kt" path="res://Sprites/Buttons/keyboard_s_outline.png" id="4_eedml"]
+[ext_resource type="Texture2D" uid="uid://db5p2gj6nufwi" path="res://Sprites/Buttons/keyboard_a_outline.png" id="5_eb3qh"]
+[ext_resource type="Texture2D" uid="uid://c4dd06cmgow7y" path="res://Sprites/Buttons/keyboard_w_outline.png" id="6_51cxn"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5gc3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uiblx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rx3p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eedml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eb3qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_51cxn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

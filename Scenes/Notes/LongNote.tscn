@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bj3acd685avg7"]
+
+[ext_resource type="Script" uid="uid://c4x1nni28x7t" path="res://Scripts/Notes/LongNote.gd" id="1_4t2la"]
+[ext_resource type="Texture2D" uid="uid://be7wujjr4idyp" path="res://Sprites/Notes/Effects/Long.tres" id="2_430de"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1eugu"]
+load_path = "res://.godot/imported/ring_a_noise.png-07be1d58d68e6bb9c7076928225c6481.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_picia"]
+load_path = "res://.godot/imported/ring_a.png-59dfcc06403c1282b0574f3fff988b82.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6a4ne"]
+load_path = "res://.godot/imported/ring_b.png-a64ea24c0eafca5eddbdb710b834a5da.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8r7j7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_1eugu")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_picia")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_6a4ne")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vmfmb"]
+load_path = "res://.godot/imported/fan_b_gradient.png-8205921be83d8d4ec4b12b9f48abe558.ctex"
+
+[node name="Root" type="Node2D" unique_id=831230135 node_paths=PackedStringArray("head", "body", "tail")]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_4t2la")
+head = NodePath("Head")
+body = NodePath("Body")
+tail = NodePath("Tail")
+
+[node name="Body" type="Line2D" parent="." unique_id=1972818488]
+scale = Vector2(1, 20)
+points = PackedVector2Array(0, 0, 0, 0)
+width = 50.0
+default_color = Color(0.88431424, 3.200695e-06, 1.1551381e-06, 1)
+texture = ExtResource("2_430de")
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Head" type="AnimatedSprite2D" parent="." unique_id=1150566528]
+sprite_frames = SubResource("SpriteFrames_8r7j7")
+autoplay = "default"
+frame_progress = 0.19618273
+
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=265514732]
+texture = SubResource("CompressedTexture2D_vmfmb")
+
+[node name="Tail" type="AnimatedSprite2D" parent="." unique_id=1557225556]
+sprite_frames = SubResource("SpriteFrames_8r7j7")
+autoplay = "default"
+frame_progress = 0.19618273
+
+[node name="Sprite2D" type="Sprite2D" parent="Tail" unique_id=2131082179]
+texture = SubResource("CompressedTexture2D_vmfmb")

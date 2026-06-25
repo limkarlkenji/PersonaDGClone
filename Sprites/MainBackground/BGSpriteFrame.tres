@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dx05565kmqmwj"]
+
+[ext_resource type="Texture2D" uid="uid://dxjcj222kh6u4" path="res://Sprites/Particle/circle_02.png" id="1_cepuo"]
+[ext_resource type="Texture2D" uid="uid://dqnyyklo55ayd" path="res://Sprites/Particle/circle_04.png" id="1_kuarq"]
+[ext_resource type="Texture2D" uid="uid://05lksxk6vii3" path="res://Sprites/Particle/circle_03.png" id="2_aelud"]
+[ext_resource type="Texture2D" uid="uid://cwf6fvuay78kg" path="res://Sprites/Particle/circle_01.png" id="2_ndobh"]
+[ext_resource type="Texture2D" uid="uid://ceb3tm7eyev8p" path="res://Sprites/Particle/ring_a.png" id="4_vpbm1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kuarq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ndobh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_cepuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vpbm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_aelud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

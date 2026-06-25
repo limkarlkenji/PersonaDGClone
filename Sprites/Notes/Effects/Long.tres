@@ -1,0 +1,23 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://be7wujjr4idyp"]
+
+[ext_resource type="Texture2D" uid="uid://dq8ou5upb1op3" path="res://Sprites/Notes/Effects/trace_01_rotated.png" id="1_jlmc2"]
+[ext_resource type="Texture2D" uid="uid://2a86c7mwrneq" path="res://Sprites/Notes/Effects/trace_02_rotated.png" id="2_cseaq"]
+[ext_resource type="Texture2D" uid="uid://mr8ds08fjjkp" path="res://Sprites/Notes/Effects/trace_03_rotated.png" id="3_fb581"]
+[ext_resource type="Texture2D" uid="uid://dxhw0s6b1m10x" path="res://Sprites/Notes/Effects/trace_04_rotated.png" id="4_d1cbg"]
+[ext_resource type="Texture2D" uid="uid://dbrgxn8mearpe" path="res://Sprites/Notes/Effects/trace_05_rotated.png" id="5_tp6pr"]
+
+[resource]
+frames = 6
+speed_scale = 5.0
+frame_0/texture = ExtResource("5_tp6pr")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("3_fb581")
+frame_1/duration = 0.3
+frame_2/texture = ExtResource("2_cseaq")
+frame_2/duration = 0.3
+frame_3/texture = ExtResource("4_d1cbg")
+frame_3/duration = 0.3
+frame_4/texture = ExtResource("1_jlmc2")
+frame_4/duration = 0.3
+frame_5/texture = ExtResource("2_cseaq")
+frame_5/duration = 0.3

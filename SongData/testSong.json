@@ -1,0 +1,50 @@
+[
+	{
+		"target": [2],
+		"type": 2,
+		"duration": 0,
+		"hitTime": 2.0
+	},
+	{
+		"target": [0],
+		"type": 1,
+		"duration": 1,
+		"hitTime": 3.5
+	},
+	{
+		"target": [2,3],
+		"type": 0,
+		"duration": 0,
+		"hitTime": 5.0
+	},
+	{
+		"target": [3],
+		"type": 0,
+		"duration": 0,
+		"hitTime": 5.5
+	},
+	{
+		"target": [5],
+		"type": 0,
+		"duration": 0,
+		"hitTime": 6.0
+	},
+	{
+		"target": [1],
+		"type": 0,
+		"duration": 0,
+		"hitTime": 8.0
+	},
+	{
+		"target": [2],
+		"type": 0,
+		"duration": 0,
+		"hitTime": 9.0
+	},
+	{
+		"target": [4],
+		"type": 0,
+		"duration": 0,
+		"hitTime": 12.0
+	}
+]

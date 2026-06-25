@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b7ry4ipql5ex1"]
+
+[ext_resource type="Texture2D" uid="uid://dlbnapq3hqmht" path="res://Sprites/Particle/shape_g.png" id="1_ef8hy"]
+[ext_resource type="Script" uid="uid://cpd3n2yfm7bcc" path="res://Scripts/MissParticle.gd" id="2_ef8hy"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" unique_id=147794780 node_paths=PackedStringArray("particle")]
+emitting = false
+texture = ExtResource("1_ef8hy")
+one_shot = true
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+angular_velocity_min = -500.0
+angular_velocity_max = 500.0
+linear_accel_min = 5.0
+linear_accel_max = 5.0
+tangential_accel_max = 5.0
+angle_max = 180.0
+scale_amount_min = 0.1
+scale_amount_max = 0.25
+color = Color(0.78167635, 0, 0.17154166, 1)
+script = ExtResource("2_ef8hy")
+particle = NodePath(".")
